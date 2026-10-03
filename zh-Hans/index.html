@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TASK 耗材计时 — 隐私政策</title>
+<meta name="description" content="一句话总结：这个应用没有服务器、没有账号系统，你的数据只留在你的手机里。开发者无法获取你的任何数据。">
+<link rel="alternate" hreflang="zh-Hant" href="https://shid800128-max.github.io/consumable-timer-privacy/">
+<link rel="alternate" hreflang="en" href="https://shid800128-max.github.io/consumable-timer-privacy/en/">
+<link rel="alternate" hreflang="ja" href="https://shid800128-max.github.io/consumable-timer-privacy/ja/">
+<link rel="alternate" hreflang="ko" href="https://shid800128-max.github.io/consumable-timer-privacy/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://shid800128-max.github.io/consumable-timer-privacy/zh-Hans/">
+<style>
+  :root { --font: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; }
+  :root {
+    --bg: #f4f7fa;
+    --card: #ffffff;
+    --ink: #232f3a;
+    --ink2: #3d4a57;
+    --ink3: #586878;
+    --ink4: #758697;
+    --line: #dfe7ee;
+    --accent: #3e7a96;
+    --accent-deep: #2f6480;
+    --accent-soft: #e4eef4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a20;
+      --card: #1b232b;
+      --ink: #e8eef4;
+      --ink2: #cfdae4;
+      --ink3: #a3b3c1;
+      --ink4: #8496a5;
+      --line: #2b363f;
+      --accent: #7fb6ce;
+      --accent-deep: #a6cfe1;
+      --accent-soft: #223038;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 26px;
+    margin-bottom: 26px;
+  }
+  h1 { font-size: 27px; line-height: 1.3; margin: 0 0 6px; font-weight: 800; }
+  .updated { color: var(--ink4); font-size: 13.5px; margin: 0 0 18px; }
+  .lead {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 15px 17px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    line-height: 1.75;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+  }
+  h2 {
+    font-size: 19px;
+    margin: 0 0 14px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  h3 {
+    font-size: 15.5px;
+    margin: 22px 0 8px;
+    font-weight: 700;
+    color: var(--accent-deep);
+  }
+  p { margin: 0 0 13px; color: var(--ink2); font-size: 15px; }
+  section p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); }
+  a { color: var(--accent-deep); }
+  ul { margin: 0 0 13px; padding-left: 22px; color: var(--ink2); font-size: 15px; }
+  li { margin-bottom: 6px; }
+  .scroll { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 420px; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    color: var(--ink2);
+  }
+  th { color: var(--ink); font-weight: 700; white-space: nowrap; }
+  blockquote {
+    margin: 14px 0;
+    padding: 12px 16px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 10px 10px 0;
+    color: var(--ink3);
+    font-size: 14px;
+  }
+  blockquote p { margin: 0; color: inherit; font-size: inherit; }
+  .contact {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--accent-deep);
+    word-break: break-all;
+  }
+  footer {
+    text-align: center;
+    color: var(--ink4);
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  code { font-size: 0.9em; background: var(--accent-soft); padding: 1px 5px; border-radius: 5px; }
+  html[lang="ko"] body { word-break: keep-all; overflow-wrap: anywhere; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: flex-end; margin: 0 0 14px; font-size: 13.5px; }
+  nav.langs a { color: var(--ink3); text-decoration: none; }
+  nav.langs a[aria-current] { color: var(--accent-deep); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langs">
+  <a href="../" hreflang="zh-Hant">繁體中文</a>
+  <a href="../en/" hreflang="en">English</a>
+  <a href="../ja/" hreflang="ja">日本語</a>
+  <a href="../ko/" hreflang="ko">한국어</a>
+  <a href="../zh-Hans/" hreflang="zh-Hans" aria-current="page">简体中文</a>
+</nav>
+
+<header>
+  <h1>TASK 耗材计时 — 隐私政策</h1>
+  <p class="updated">最后更新：2026 年 10 月 3 日</p>
+  <p>耗材计时（Consumable Timer）是一款耗材更换提醒应用，开发者为 Boen。</p>
+  <p class="lead">一句话总结：这个应用没有服务器、没有账号系统，你的数据只留在你的手机里。开发者无法获取你的任何数据。</p>
+</header>
+
+<section>
+  <h2>1. 开发者不会收到你的任何数据</h2>
+  <p>本应用<strong>没有后端服务器</strong>，也<strong>没有账号或登录系统</strong>。你创建的耗材列表、更换记录、地点、位置坐标与所有设置，全部只写入你手机上的本地数据库，不会上传到任何地方。</p>
+  <p>本应用<strong>未使用任何分析、追踪或广告 SDK</strong>（例如 Firebase Analytics、Google Analytics、广告联盟等）。开发者没有任何渠道得知你是谁、你记录了什么、或你如何使用这个应用。</p>
+</section>
+
+<section>
+  <h2>2. 应用在你的设备上存储哪些数据</h2>
+  <p>以下数据<strong>仅存储在你的设备本地</strong>：</p>
+  <div class="scroll">
+  <table>
+    <tr><th>数据</th><th>说明</th></tr>
+    <tr><td>耗材数据</td><td>名称、型号、更换周期、到期日、库存量、购买链接、备注</td></tr>
+    <tr><td>更换历史</td><td>每次点「已更换」的日期记录</td></tr>
+    <tr><td>地点数据</td><td>你自行命名的地点、你自行设置的<strong>位置坐标</strong>、你自行指定的 <strong>Wi-Fi 网络名称</strong></td></tr>
+    <tr><td>型号照片</td><td>你自行用相机拍摄的照片</td></tr>
+    <tr><td>应用设置</td><td>提醒时间、有空时段、作息、外观设置、语言</td></tr>
+    <tr><td>购买状态</td><td>是否已购买 Pro、购买的方案类型（按月／按年／永久买断），以及最后一次向商店确认的时间</td></tr>
+  </table>
+  </div>
+  <p>本应用已<strong>停用 Android 系统自动备份</strong>（<code>allowBackup="false"</code>），因此上述数据不会被系统自动上传到云端，也不会在更换设备时自动转移。跨设备转移只能通过你主动导出的备份文件。</p>
+</section>
+
+<section>
+  <h2>3. 权限逐项说明</h2>
+  <h3>位置（大致位置、精确位置、后台位置）</h3>
+  <p><strong>用途</strong>：判断你是否回到了你自行设置的地点，以便在你真的动得了手的时候才发出提醒。</p>
+  <p><strong>如何处理</strong>：位置比对<strong>完全在你的设备上进行</strong>。坐标不会离开设备，不会发送给开发者或任何第三方。</p>
+  <p><strong>拒绝会怎样</strong>：应用仍可正常使用，提醒会改为在你设置的固定时间发出。</p>
+  <h3>Wi-Fi 状态</h3>
+  <p><strong>用途</strong>：如果你选择「Wi-Fi 模式」，应用会读取<strong>当前已连接</strong>的 Wi-Fi 网络名称（SSID），与你自行设置的名称比对，以判断你是否已到达该地点。</p>
+  <p><strong>明确不做的事</strong>：不扫描附近的 Wi-Fi 网络、不记录 BSSID 或任何网络硬件标识符、不上传网络名称。</p>
+  <blockquote><p>Android 系统将读取 Wi-Fi 名称归类为位置相关权限，因此此功能同样需要位置权限。</p></blockquote>
+  <h3>通知</h3>
+  <p><strong>用途</strong>：发出耗材到期提醒与采购提醒。</p>
+  <h3>相机</h3>
+  <p><strong>用途</strong>：仅在你主动选择为耗材拍摄型号照片时使用，通过系统相机获取。照片只存储在本地。</p>
+  <h3>存储空间</h3>
+  <p><strong>用途</strong>：仅用于你主动执行「导出备份」时，将备份文件保存到你自行选择的位置；以及导入你自行选择的备份文件。</p>
+  <h3>开机完成通知</h3>
+  <p><strong>用途</strong>：设备重新开机后重新安排已设置的提醒。若没有此权限，重启后提醒会消失。</p>
+  <h3>网络访问、振动、唤醒锁定、前台服务</h3>
+  <p>由下述第三方组件或系统通知机制带入。本应用自身不会主动向任何服务器发送你的数据。</p>
+</section>
+
+<section>
+  <h2>4. 第三方服务</h2>
+  <p>本应用仅使用两项由 Google 提供的组件：</p>
+  <h3>Google Maps SDK for Android</h3>
+  <p><strong>何时运作</strong>：只有当你进入「设置地点位置」这一页时。</p>
+  <p><strong>会发生什么</strong>：显示地图需要向 Google 请求地图图块，该请求会包含地图的显示范围与设备信息。<strong>这些数据流向 Google，不会流向开发者。</strong></p>
+  <p><strong>可以完全不碰</strong>：如果你不设置地点坐标，这一页永远不会被打开。</p>
+  <p>Google 对这些数据的处理适用 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>。</p>
+  <h3>Google Play 结算服务</h3>
+  <p><strong>何时运作</strong>：</p>
+  <ul>
+    <li><strong>每次打开应用时</strong>，会向 Google Play 查询商品信息，并确认你当前的购买状态。</li>
+    <li>你主动购买 Pro 或使用「恢复购买」时。</li>
+  </ul>
+  <p><strong>为什么每次打开都要确认</strong>：如果不确认，已经付费的用户在换手机或重新安装后会被误判为未购买。若查询失败（例如离线），应用会维持本地已有的状态，<strong>不会</strong>因此把你降回免费版。</p>
+  <p><strong>会发生什么</strong>：付款与查询都由 Google Play 处理。应用<strong>不会获取也不会存储</strong>你的姓名、电子邮件、付款方式或商店账号；本地只记录上表所列的购买状态。</p>
+  <p>由于这些查询是向 Google 发出的网络请求，Google 会知道这部设备向商店查询过本应用的商品与购买状态。<strong>这些数据流向 Google，不会流向开发者。</strong></p>
+  <p>Google 对上述数据的处理适用 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>。</p>
+</section>
+
+<section>
+  <h2>5. 数据分享与出售</h2>
+  <p>开发者<strong>不会</strong>分享、出售、出租或交换你的任何数据 —— 因为开发者从一开始就没有获取任何数据。</p>
+  <p>除上述第三方服务外，本应用不会将你的数据发送给任何其他对象。</p>
+</section>
+
+<section>
+  <h2>6. 数据保留与删除</h2>
+  <p>你的数据保存在你的设备上，保留期限由你决定。</p>
+  <p><strong>删除方式</strong>：在应用内删除个别项目，或直接卸载应用 —— 卸载会一并移除所有本地数据。由于系统自动备份已停用，数据不会残留在云端。</p>
+  <p>若你曾主动导出备份文件，该文件位于你自行选择的存储位置，需由你自行删除。</p>
+</section>
+
+<section>
+  <h2>7. 儿童</h2>
+  <p>本应用并非以儿童为对象设计，也不会刻意向儿童收集任何数据。</p>
+</section>
+
+<section>
+  <h2>8. 政策变更</h2>
+  <p>若本应用的功能变动导致本政策需要修改，开发者会更新本页并修改上方的「最后更新」日期。重大变更会在应用的版本更新说明中一并告知。</p>
+</section>
+
+<section>
+  <h2>9. 联系方式</h2>
+  <p>对本政策有任何疑问，请联系：</p>
+  <p class="contact">boen520520@gmail.com</p>
+</section>
+
+<footer>TASK 耗材计时</footer>
+
+</div>
+</body>
+</html>

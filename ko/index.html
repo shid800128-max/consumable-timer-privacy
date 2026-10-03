@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TASK 소모품 타이머 — 개인정보처리방침</title>
+<meta name="description" content="한 문장으로 요약하면: 이 앱에는 서버도 계정 시스템도 없으며, 데이터는 사용자의 휴대폰에만 남습니다. 개발자는 사용자의 어떤 데이터도 얻을 수 없습니다.">
+<link rel="alternate" hreflang="zh-Hant" href="https://shid800128-max.github.io/consumable-timer-privacy/">
+<link rel="alternate" hreflang="en" href="https://shid800128-max.github.io/consumable-timer-privacy/en/">
+<link rel="alternate" hreflang="ja" href="https://shid800128-max.github.io/consumable-timer-privacy/ja/">
+<link rel="alternate" hreflang="ko" href="https://shid800128-max.github.io/consumable-timer-privacy/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://shid800128-max.github.io/consumable-timer-privacy/zh-Hans/">
+<style>
+  :root { --font: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; }
+  :root {
+    --bg: #f4f7fa;
+    --card: #ffffff;
+    --ink: #232f3a;
+    --ink2: #3d4a57;
+    --ink3: #586878;
+    --ink4: #758697;
+    --line: #dfe7ee;
+    --accent: #3e7a96;
+    --accent-deep: #2f6480;
+    --accent-soft: #e4eef4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141a20;
+      --card: #1b232b;
+      --ink: #e8eef4;
+      --ink2: #cfdae4;
+      --ink3: #a3b3c1;
+      --ink4: #8496a5;
+      --line: #2b363f;
+      --accent: #7fb6ce;
+      --accent-deep: #a6cfe1;
+      --accent-soft: #223038;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  header {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 26px;
+    margin-bottom: 26px;
+  }
+  h1 { font-size: 27px; line-height: 1.3; margin: 0 0 6px; font-weight: 800; }
+  .updated { color: var(--ink4); font-size: 13.5px; margin: 0 0 18px; }
+  .lead {
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 15px 17px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent-deep);
+    line-height: 1.75;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+  }
+  h2 {
+    font-size: 19px;
+    margin: 0 0 14px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  h3 {
+    font-size: 15.5px;
+    margin: 22px 0 8px;
+    font-weight: 700;
+    color: var(--accent-deep);
+  }
+  p { margin: 0 0 13px; color: var(--ink2); font-size: 15px; }
+  section p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); }
+  a { color: var(--accent-deep); }
+  ul { margin: 0 0 13px; padding-left: 22px; color: var(--ink2); font-size: 15px; }
+  li { margin-bottom: 6px; }
+  .scroll { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 420px; }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    color: var(--ink2);
+  }
+  th { color: var(--ink); font-weight: 700; white-space: nowrap; }
+  blockquote {
+    margin: 14px 0;
+    padding: 12px 16px;
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 10px 10px 0;
+    color: var(--ink3);
+    font-size: 14px;
+  }
+  blockquote p { margin: 0; color: inherit; font-size: inherit; }
+  .contact {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--accent-deep);
+    word-break: break-all;
+  }
+  footer {
+    text-align: center;
+    color: var(--ink4);
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  code { font-size: 0.9em; background: var(--accent-soft); padding: 1px 5px; border-radius: 5px; }
+  html[lang="ko"] body { word-break: keep-all; overflow-wrap: anywhere; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: flex-end; margin: 0 0 14px; font-size: 13.5px; }
+  nav.langs a { color: var(--ink3); text-decoration: none; }
+  nav.langs a[aria-current] { color: var(--accent-deep); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="langs">
+  <a href="../" hreflang="zh-Hant">繁體中文</a>
+  <a href="../en/" hreflang="en">English</a>
+  <a href="../ja/" hreflang="ja">日本語</a>
+  <a href="../ko/" hreflang="ko" aria-current="page">한국어</a>
+  <a href="../zh-Hans/" hreflang="zh-Hans">简体中文</a>
+</nav>
+
+<header>
+  <h1>TASK 소모품 타이머 — 개인정보처리방침</h1>
+  <p class="updated">최종 업데이트: 2026년 10월 3일</p>
+  <p>TASK 소모품 타이머(Consumable Timer)는 소모품 교체 시기를 알려주는 앱이며, 개발자는 Boen입니다.</p>
+  <p class="lead">한 문장으로 요약하면: 이 앱에는 서버도 계정 시스템도 없으며, 데이터는 사용자의 휴대폰에만 남습니다. 개발자는 사용자의 어떤 데이터도 얻을 수 없습니다.</p>
+</header>
+
+<section>
+  <h2>1. 개발자는 사용자의 데이터를 전혀 받지 않습니다</h2>
+  <p>이 앱에는 <strong>백엔드 서버가 없고</strong>, <strong>계정이나 로그인 시스템도 없습니다</strong>. 사용자가 만든 소모품 목록, 교체 기록, 장소, 위치 좌표와 모든 설정은 휴대폰의 로컬 데이터베이스에만 기록되며 어디에도 업로드되지 않습니다.</p>
+  <p>이 앱은 <strong>분석, 추적, 광고 SDK를 전혀 사용하지 않습니다</strong>(예: Firebase Analytics, Google Analytics, 광고 네트워크 등). 개발자는 사용자가 누구인지, 무엇을 기록했는지, 앱을 어떻게 사용하는지 알 수 있는 방법이 없습니다.</p>
+</section>
+
+<section>
+  <h2>2. 앱이 기기에 저장하는 데이터</h2>
+  <p>다음 데이터는 <strong>사용자의 기기에만 저장됩니다</strong>:</p>
+  <div class="scroll">
+  <table>
+    <tr><th>데이터</th><th>설명</th></tr>
+    <tr><td>소모품 데이터</td><td>이름, 모델명, 교체 주기, 교체일, 재고 수량, 구매 링크, 메모</td></tr>
+    <tr><td>교체 기록</td><td>'교체 완료'를 누른 날짜</td></tr>
+    <tr><td>장소 데이터</td><td>사용자가 직접 이름 붙인 장소, 사용자가 직접 설정한 <strong>위치 좌표</strong>, 사용자가 직접 지정한 <strong>Wi-Fi 네트워크 이름</strong></td></tr>
+    <tr><td>모델 사진</td><td>사용자가 카메라로 직접 찍은 사진</td></tr>
+    <tr><td>앱 설정</td><td>알림 시간, 여유 시간대, 생활 패턴, 화면 설정, 언어</td></tr>
+    <tr><td>구매 상태</td><td>Pro 구매 여부, 구매한 요금제 종류(월간/연간/평생 이용), 마지막으로 스토어에서 확인한 시각</td></tr>
+  </table>
+  </div>
+  <p>이 앱은 <strong>Android 시스템 자동 백업을 사용 중지했습니다</strong>(<code>allowBackup="false"</code>). 따라서 위 데이터는 시스템에 의해 클라우드로 자동 업로드되지 않으며, 기기를 바꿀 때 자동으로 옮겨지지도 않습니다. 기기 간 이동은 사용자가 직접 내보낸 백업 파일로만 가능합니다.</p>
+</section>
+
+<section>
+  <h2>3. 권한별 설명</h2>
+  <h3>위치(대략적 위치, 정확한 위치, 백그라운드 위치)</h3>
+  <p><strong>용도</strong>: 사용자가 직접 설정한 장소에 돌아왔는지 판단해, 실제로 손을 쓸 수 있을 때 알림을 보내기 위해서입니다.</p>
+  <p><strong>처리 방식</strong>: 위치 비교는 <strong>모두 사용자의 기기 안에서 이루어집니다</strong>. 좌표는 기기 밖으로 나가지 않으며, 개발자나 제3자에게 전송되지 않습니다.</p>
+  <p><strong>거부하면</strong>: 앱은 그대로 정상적으로 사용할 수 있으며, 알림은 사용자가 설정한 고정 시간에 옵니다.</p>
+  <h3>Wi-Fi 상태</h3>
+  <p><strong>용도</strong>: 사용자가 'Wi-Fi 모드'를 선택하면, 앱은 <strong>현재 연결된</strong> Wi-Fi 네트워크 이름(SSID)을 읽어 사용자가 직접 설정한 이름과 비교해 그 장소에 도착했는지 판단합니다.</p>
+  <p><strong>하지 않는 것</strong>: 주변 Wi-Fi 네트워크를 검색하지 않고, BSSID나 네트워크 하드웨어 식별자를 기록하지 않으며, 네트워크 이름을 업로드하지 않습니다.</p>
+  <blockquote><p>Android는 Wi-Fi 이름 읽기를 위치 관련 권한으로 분류하므로, 이 기능에도 위치 권한이 필요합니다.</p></blockquote>
+  <h3>알림</h3>
+  <p><strong>용도</strong>: 소모품 교체 알림과 재구매 알림을 보내기 위해서입니다.</p>
+  <h3>카메라</h3>
+  <p><strong>용도</strong>: 사용자가 소모품의 모델 사진을 찍기로 선택했을 때만 시스템 카메라를 통해 사용합니다. 사진은 기기에만 저장됩니다.</p>
+  <h3>저장공간</h3>
+  <p><strong>용도</strong>: 사용자가 '백업 내보내기'를 실행할 때 직접 고른 위치에 백업 파일을 저장하고, 사용자가 직접 고른 백업 파일을 가져올 때만 사용합니다.</p>
+  <h3>부팅 완료 알림</h3>
+  <p><strong>용도</strong>: 기기를 다시 시작한 뒤 설정된 알림을 다시 예약하기 위해서입니다. 이 권한이 없으면 재시작 후 알림이 사라집니다.</p>
+  <h3>네트워크 액세스, 진동, 절전 모드 방지, 포그라운드 서비스</h3>
+  <p>아래의 제3자 구성 요소나 시스템 알림 기능에 의해 추가되는 권한입니다. 이 앱 자체가 사용자의 데이터를 서버로 보내는 일은 없습니다.</p>
+</section>
+
+<section>
+  <h2>4. 제3자 서비스</h2>
+  <p>이 앱은 Google이 제공하는 두 가지 구성 요소만 사용합니다:</p>
+  <h3>Google Maps SDK for Android</h3>
+  <p><strong>작동 시점</strong>: '장소 위치 설정' 화면에 들어갈 때만입니다.</p>
+  <p><strong>무슨 일이 일어나나요</strong>: 지도를 표시하려면 Google에 지도 타일을 요청해야 하며, 이 요청에는 지도 표시 범위와 기기 정보가 포함됩니다. <strong>이 데이터는 Google로 가며, 개발자에게는 가지 않습니다.</strong></p>
+  <p><strong>전혀 사용하지 않을 수도 있습니다</strong>: 장소 좌표를 설정하지 않으면 이 화면은 절대 열리지 않습니다.</p>
+  <p>Google의 데이터 처리에는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>이 적용됩니다.</p>
+  <h3>Google Play 결제 서비스</h3>
+  <p><strong>작동 시점</strong>:</p>
+  <ul>
+    <li><strong>앱을 열 때마다</strong> Google Play에 상품 정보를 조회하고 현재 구매 상태를 확인합니다.</li>
+    <li>사용자가 Pro를 구매하거나 '구매 복원'을 사용할 때.</li>
+  </ul>
+  <p><strong>매번 확인하는 이유</strong>: 확인하지 않으면 이미 결제한 사용자가 휴대폰을 바꾸거나 다시 설치한 뒤 미구매로 잘못 판단될 수 있기 때문입니다. 조회에 실패하면(예: 오프라인) 앱은 기기에 있는 기존 상태를 유지하며, 그 때문에 무료 버전으로 되돌리지 <strong>않습니다</strong>.</p>
+  <p><strong>무슨 일이 일어나나요</strong>: 결제와 조회는 Google Play가 처리합니다. 앱은 사용자의 이름, 이메일, 결제 수단, 스토어 계정을 <strong>얻거나 저장하지 않으며</strong>, 기기에는 위 표에 나온 구매 상태만 기록합니다.</p>
+  <p>이 조회는 Google로 보내는 네트워크 요청이므로, 이 기기가 이 앱의 상품과 구매 상태를 스토어에 조회했다는 사실은 Google이 알게 됩니다. <strong>이 데이터는 Google로 가며, 개발자에게는 가지 않습니다.</strong></p>
+  <p>Google의 데이터 처리에는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>이 적용됩니다.</p>
+</section>
+
+<section>
+  <h2>5. 데이터 공유와 판매</h2>
+  <p>개발자는 사용자의 어떤 데이터도 공유, 판매, 대여, 교환하지 <strong>않습니다</strong> —— 처음부터 어떤 데이터도 얻지 않기 때문입니다.</p>
+  <p>위의 제3자 서비스를 제외하면, 이 앱은 사용자의 데이터를 다른 누구에게도 보내지 않습니다.</p>
+</section>
+
+<section>
+  <h2>6. 데이터 보관과 삭제</h2>
+  <p>사용자의 데이터는 기기에 저장되며, 보관 기간은 사용자가 결정합니다.</p>
+  <p><strong>삭제 방법</strong>: 앱에서 개별 항목을 삭제하거나, 앱을 삭제하세요 —— 앱을 삭제하면 모든 로컬 데이터가 함께 지워집니다. 시스템 자동 백업이 꺼져 있으므로 클라우드에 데이터가 남지 않습니다.</p>
+  <p>사용자가 백업 파일을 내보낸 적이 있다면, 그 파일은 사용자가 고른 저장 위치에 있으므로 직접 삭제해야 합니다.</p>
+</section>
+
+<section>
+  <h2>7. 아동</h2>
+  <p>이 앱은 아동을 대상으로 설계되지 않았으며, 아동으로부터 의도적으로 데이터를 수집하지 않습니다.</p>
+</section>
+
+<section>
+  <h2>8. 방침 변경</h2>
+  <p>앱 기능 변경으로 이 방침을 수정해야 할 경우, 개발자는 이 페이지를 업데이트하고 위의 '최종 업데이트' 날짜를 바꿉니다. 중요한 변경 사항은 앱 업데이트 설명에도 함께 안내합니다.</p>
+</section>
+
+<section>
+  <h2>9. 문의</h2>
+  <p>이 방침에 대해 궁금한 점이 있으면 아래로 연락해 주세요:</p>
+  <p class="contact">boen520520@gmail.com</p>
+</section>
+
+<footer>TASK 소모품 타이머</footer>
+
+</div>
+</body>
+</html>

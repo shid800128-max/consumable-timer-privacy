@@ -4,8 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>耗材計時 — 隱私權政策</title>
-<meta name="description" content="耗材計時（Consumable Timer）的隱私權政策。沒有伺服器、沒有帳號，資料只留在你的手機裡。">
+<meta name="description" content="一句話總結：這個應用程式沒有伺服器、沒有帳號系統，你的資料只留在你的手機裡。開發者無法取得你的任何資料。">
+<link rel="alternate" hreflang="zh-Hant" href="https://shid800128-max.github.io/consumable-timer-privacy/">
+<link rel="alternate" hreflang="en" href="https://shid800128-max.github.io/consumable-timer-privacy/en/">
+<link rel="alternate" hreflang="ja" href="https://shid800128-max.github.io/consumable-timer-privacy/ja/">
+<link rel="alternate" hreflang="ko" href="https://shid800128-max.github.io/consumable-timer-privacy/ko/">
+<link rel="alternate" hreflang="zh-Hans" href="https://shid800128-max.github.io/consumable-timer-privacy/zh-Hans/">
 <style>
+  :root { --font: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", system-ui, sans-serif; }
   :root {
     --bg: #f4f7fa;
     --card: #ffffff;
@@ -37,8 +43,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI",
-      "Microsoft JhengHei", system-ui, sans-serif;
+    font-family: var(--font);
     line-height: 1.85;
     -webkit-font-smoothing: antialiased;
   }
@@ -121,21 +126,35 @@
     font-size: 13px;
     margin-top: 30px;
   }
+  code { font-size: 0.9em; background: var(--accent-soft); padding: 1px 5px; border-radius: 5px; }
+  html[lang="ko"] body { word-break: keep-all; overflow-wrap: anywhere; }
+  nav.langs { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: flex-end; margin: 0 0 14px; font-size: 13.5px; }
+  nav.langs a { color: var(--ink3); text-decoration: none; }
+  nav.langs a[aria-current] { color: var(--accent-deep); font-weight: 700; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<nav class="langs">
+  <a href="./" hreflang="zh-Hant" aria-current="page">繁體中文</a>
+  <a href="en/" hreflang="en">English</a>
+  <a href="ja/" hreflang="ja">日本語</a>
+  <a href="ko/" hreflang="ko">한국어</a>
+  <a href="zh-Hans/" hreflang="zh-Hans">简体中文</a>
+</nav>
+
 <header>
   <h1>耗材計時 — 隱私權政策</h1>
-  <p class="updated">最後更新：2026 年 9 月 2 日｜開發者：Boen</p>
-  <p class="lead">這個應用程式沒有伺服器、沒有帳號系統，你的資料只留在你的手機裡。開發者無法取得你的任何資料。</p>
+  <p class="updated">最後更新：2026 年 10 月 3 日</p>
+  <p>耗材計時（Consumable Timer）是一款耗材更換提醒應用程式，開發者為 Boen。</p>
+  <p class="lead">一句話總結：這個應用程式沒有伺服器、沒有帳號系統，你的資料只留在你的手機裡。開發者無法取得你的任何資料。</p>
 </header>
 
 <section>
   <h2>1. 開發者不會收到你的任何資料</h2>
   <p>本應用程式<strong>沒有後端伺服器</strong>，也<strong>沒有帳號或登入系統</strong>。你建立的耗材清單、更換紀錄、地點、位置座標與所有設定，全部只寫入你手機上的本機資料庫，不會上傳到任何地方。</p>
-  <p>本應用程式<strong>未使用任何分析、追蹤或廣告 SDK</strong>（例如 Firebase Analytics、Google Analytics、廣告聯播網等）。開發者沒有任何管道得知你是誰、你記錄了什麼，或你如何使用這個應用程式。</p>
+  <p>本應用程式<strong>未使用任何分析、追蹤或廣告 SDK</strong>（例如 Firebase Analytics、Google Analytics、廣告聯播網等）。開發者沒有任何管道得知你是誰、你記錄了什麼、或你如何使用這個應用程式。</p>
 </section>
 
 <section>
@@ -146,56 +165,54 @@
     <tr><th>資料</th><th>說明</th></tr>
     <tr><td>耗材資料</td><td>名稱、型號、更換週期、到期日、庫存量、購買連結、備註</td></tr>
     <tr><td>更換歷史</td><td>每次按下「已更換」的日期紀錄</td></tr>
-    <tr><td>地點資料</td><td>你自行命名的地點、你自行設定的位置座標、你自行指定的 Wi-Fi 網路名稱</td></tr>
+    <tr><td>地點資料</td><td>你自行命名的地點、你自行設定的<strong>位置座標</strong>、你自行指定的 <strong>Wi-Fi 網路名稱</strong></td></tr>
     <tr><td>型號照片</td><td>你自行以相機拍攝的照片</td></tr>
-    <tr><td>應用程式設定</td><td>提醒時間、可動手時段、作息、外觀設定</td></tr>
-    <tr><td>購買狀態</td><td>一個表示「是否已購買 Pro」的本機紀錄</td></tr>
+    <tr><td>應用程式設定</td><td>提醒時間、可動手時段、作息、外觀設定、語言</td></tr>
+    <tr><td>購買狀態</td><td>是否已購買 Pro、購買的方案種類（月繳／年繳／永久買斷），以及最後一次向商店確認的時間</td></tr>
   </table>
   </div>
-  <p>本應用程式已<strong>停用 Android 系統自動備份</strong>，因此上述資料不會被系統自動上傳至雲端，也不會在更換裝置時自動轉移。跨裝置轉移僅能透過你主動匯出的備份檔案。</p>
+  <p>本應用程式已<strong>停用 Android 系統自動備份</strong>（<code>allowBackup="false"</code>），因此上述資料不會被系統自動上傳至雲端，也不會在更換裝置時自動轉移。跨裝置轉移僅能透過你主動匯出的備份檔案。</p>
 </section>
 
 <section>
   <h2>3. 權限逐項說明</h2>
-
   <h3>位置（概略、精確、背景位置）</h3>
   <p><strong>用途</strong>：判斷你是否回到了你自行設定的地點，以便在你真的動得了手的時候才發出提醒。</p>
   <p><strong>如何處理</strong>：位置比對<strong>完全在你的裝置上進行</strong>。座標不會離開裝置，不會傳送給開發者或任何第三方。</p>
   <p><strong>拒絕會怎樣</strong>：應用程式仍可正常使用，提醒會改在你設定的固定時間發出。</p>
-
   <h3>Wi-Fi 狀態</h3>
   <p><strong>用途</strong>：如果你選擇「Wi-Fi 模式」，應用程式會讀取<strong>目前已連線</strong>的 Wi-Fi 網路名稱（SSID），與你自行設定的名稱比對，以判斷你是否已抵達該地點。</p>
   <p><strong>明確不做的事</strong>：不掃描附近的 Wi-Fi 網路、不記錄 BSSID 或任何網路硬體識別碼、不上傳網路名稱。</p>
   <blockquote><p>Android 系統將讀取 Wi-Fi 名稱歸類為位置相關權限，因此此功能同樣需要位置權限。</p></blockquote>
-
   <h3>通知</h3>
   <p><strong>用途</strong>：發出耗材到期提醒與採購提醒。</p>
-
   <h3>相機</h3>
   <p><strong>用途</strong>：僅在你主動選擇為耗材拍攝型號照片時使用，透過系統相機取得。照片只儲存在本機。</p>
-
   <h3>儲存空間</h3>
   <p><strong>用途</strong>：僅用於你主動執行「匯出備份」時，將備份檔案儲存到你自行選擇的位置；以及匯入你自行選擇的備份檔案。</p>
-
   <h3>開機完成通知</h3>
   <p><strong>用途</strong>：裝置重新開機後重新排定已設定的提醒。若沒有此權限，重開機後提醒會消失。</p>
-
   <h3>網路存取、震動、喚醒鎖定、前景服務</h3>
   <p>由下述第三方元件或系統通知機制帶入。本應用程式自身不會主動向任何伺服器傳送你的資料。</p>
 </section>
 
 <section>
   <h2>4. 第三方服務</h2>
-  <p>本應用程式僅使用兩項由 Google 提供的元件，且都是使用者主動觸發才會運作：</p>
-
+  <p>本應用程式僅使用兩項由 Google 提供的元件：</p>
   <h3>Google Maps SDK for Android</h3>
   <p><strong>何時運作</strong>：只有當你進入「設定地點位置」這一頁時。</p>
   <p><strong>會發生什麼</strong>：顯示地圖需要向 Google 請求圖磚，該請求會包含地圖的顯示範圍與裝置資訊。<strong>這些資料流向 Google，不會流向開發者。</strong></p>
   <p><strong>可以完全不碰</strong>：如果你不設定地點座標，這一頁永遠不會被開啟。</p>
-
+  <p>Google 對這些資料的處理適用 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</p>
   <h3>Google Play 帳單服務</h3>
-  <p><strong>何時運作</strong>：只有當你主動購買 Pro 或使用「恢復購買」時。</p>
-  <p><strong>會發生什麼</strong>：付款完全由 Google Play 處理。應用程式<strong>不會取得也不會儲存</strong>你的姓名、電子郵件、付款方式或商店帳號。應用程式在本機記錄的只有「是否已購買」這一項結果。</p>
+  <p><strong>何時運作</strong>：</p>
+  <ul>
+    <li><strong>每次開啟應用程式時</strong>，會向 Google Play 查詢商品資訊，並確認你目前的購買狀態。</li>
+    <li>你主動購買 Pro 或使用「恢復購買」時。</li>
+  </ul>
+  <p><strong>為什麼每次開啟都要確認</strong>：如果不確認，已經付費的使用者在換手機或重新安裝後會被誤判成未購買。若查詢失敗（例如離線），應用程式會維持本機既有的狀態，<strong>不會</strong>因此把你降回免費版。</p>
+  <p><strong>會發生什麼</strong>：付款與查詢都由 Google Play 處理。應用程式<strong>不會取得也不會儲存</strong>你的姓名、電子郵件、付款方式或商店帳號；本機只記錄上表所列的購買狀態。</p>
+  <p>由於這些查詢是向 Google 發出的網路請求，Google 會知道這支裝置向商店查詢過本應用程式的商品與購買狀態。<strong>這些資料流向 Google，不會流向開發者。</strong></p>
   <p>Google 對上述資料的處理適用 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</p>
 </section>
 
