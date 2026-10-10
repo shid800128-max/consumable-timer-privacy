@@ -146,7 +146,7 @@
 
 <header>
   <h1>TASK 소모품 타이머 — 개인정보처리방침</h1>
-  <p class="updated">최종 업데이트: 2026년 10월 3일</p>
+  <p class="updated">최종 업데이트: 2026년 10월 11일</p>
   <p>TASK 소모품 타이머(Consumable Timer)는 소모품 교체 시기를 알려주는 앱이며, 개발자는 Boen입니다.</p>
   <p class="lead">한 문장으로 요약하면: 이 앱에는 서버도 계정 시스템도 없으며, 데이터는 사용자의 휴대폰에만 남습니다. 개발자는 사용자의 어떤 데이터도 얻을 수 없습니다.</p>
 </header>
@@ -154,7 +154,7 @@
 <section>
   <h2>1. 개발자는 사용자의 데이터를 전혀 받지 않습니다</h2>
   <p>이 앱에는 <strong>백엔드 서버가 없고</strong>, <strong>계정이나 로그인 시스템도 없습니다</strong>. 사용자가 만든 소모품 목록, 교체 기록, 장소, 위치 좌표와 모든 설정은 휴대폰의 로컬 데이터베이스에만 기록되며 어디에도 업로드되지 않습니다.</p>
-  <p>이 앱은 <strong>분석, 추적, 광고 SDK를 전혀 사용하지 않습니다</strong>(예: Firebase Analytics, Google Analytics, 광고 네트워크 등). 개발자는 사용자가 누구인지, 무엇을 기록했는지, 앱을 어떻게 사용하는지 알 수 있는 방법이 없습니다.</p>
+  <p>이 앱은 <strong>분석, 추적, 광고 SDK를 전혀 사용하지 않습니다</strong>(예: Firebase Analytics, Google Analytics, 광고 네트워크 등). 지도 구성 요소 자체가 Google로 보내는 데이터는 4절을 참고하세요. 개발자는 사용자가 누구인지, 무엇을 기록했는지, 앱을 어떻게 사용하는지 알 수 있는 방법이 없습니다.</p>
 </section>
 
 <section>
@@ -172,10 +172,12 @@
   </table>
   </div>
   <p>이 앱은 <strong>Android 시스템 자동 백업을 사용 중지했습니다</strong>(<code>allowBackup="false"</code>). 따라서 위 데이터는 시스템에 의해 클라우드로 자동 업로드되지 않으며, 기기를 바꿀 때 자동으로 옮겨지지도 않습니다. 기기 간 이동은 사용자가 직접 내보낸 백업 파일로만 가능합니다.</p>
+  <p><strong>iPhone 버전</strong>: iOS는 iCloud 백업 설정에 따라 위 데이터를 <strong>사용자 본인 Apple 계정의 iCloud 백업</strong>(또는 컴퓨터에서 만든 기기 백업)에 함께 넣습니다. 새 iPhone을 그 백업에서 복원하면 데이터도 옮겨집니다. 이 백업은 사용자의 Apple 계정에 속하며 개발자는 접근할 수 없습니다. 이 앱의 데이터를 백업에 넣고 싶지 않다면 iPhone '설정' → 사용자 이름 → 'iCloud'의 백업 관리에서 이 앱을 끄세요.</p>
 </section>
 
 <section>
   <h2>3. 권한별 설명</h2>
+  <blockquote><p>아래는 Android의 권한 이름으로 설명합니다. iPhone 버전에 필요한 것은 위치(앱을 사용하는 동안/항상), 알림, 카메라뿐이며 용도와 처리 방식은 같습니다. iPhone 버전에는 Wi-Fi 모드가 없고, 저장공간이나 부팅 완료 권한도 필요하지 않습니다(내보내기와 가져오기는 시스템 파일 선택기를 사용합니다).</p></blockquote>
   <h3>위치(대략적 위치, 정확한 위치, 백그라운드 위치)</h3>
   <p><strong>용도</strong>: 사용자가 직접 설정한 장소에 돌아왔는지 판단해, 실제로 손을 쓸 수 있을 때 알림을 보내기 위해서입니다.</p>
   <p><strong>처리 방식</strong>: 위치 비교는 <strong>모두 사용자의 기기 안에서 이루어집니다</strong>. 좌표는 기기 밖으로 나가지 않으며, 개발자나 제3자에게 전송되지 않습니다.</p>
@@ -198,7 +200,7 @@
 
 <section>
   <h2>4. 제3자 서비스</h2>
-  <p>이 앱은 Google이 제공하는 두 가지 구성 요소만 사용합니다:</p>
+  <p>Android 버전은 Google이 제공하는 두 가지 구성 요소만 사용합니다. iPhone 버전은 Google Maps SDK for iOS와 Apple의 App Store 구매를 사용합니다(이 절의 마지막 두 항목 참고):</p>
   <h3>Google Maps SDK for Android</h3>
   <p><strong>작동 시점</strong>: '장소 위치 설정' 화면에 들어갈 때만입니다.</p>
   <p><strong>무슨 일이 일어나나요</strong>: 지도를 표시하려면 Google에 지도 타일을 요청해야 하며, 이 요청에는 지도 표시 범위와 기기 정보가 포함됩니다. <strong>이 데이터는 Google로 가며, 개발자에게는 가지 않습니다.</strong></p>
@@ -214,6 +216,14 @@
   <p><strong>무슨 일이 일어나나요</strong>: 결제와 조회는 Google Play가 처리합니다. 앱은 사용자의 이름, 이메일, 결제 수단, 스토어 계정을 <strong>얻거나 저장하지 않으며</strong>, 기기에는 위 표에 나온 구매 상태만 기록합니다.</p>
   <p>이 조회는 Google로 보내는 네트워크 요청이므로, 이 기기가 이 앱의 상품과 구매 상태를 스토어에 조회했다는 사실은 Google이 알게 됩니다. <strong>이 데이터는 Google로 가며, 개발자에게는 가지 않습니다.</strong></p>
   <p>Google의 데이터 처리에는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>이 적용됩니다.</p>
+  <h3>iPhone 버전: Google Maps SDK for iOS</h3>
+  <p><strong>작동 시점</strong>: Android 버전과 같이 '장소 위치 설정' 화면에 들어갈 때만 작동합니다.</p>
+  <p><strong>일어나는 일</strong>: Google에 지도 타일을 요청하는 것 외에, Google이 이 구성 요소에 대해 공개한 개인정보 정보에 따르면 충돌·성능 같은 진단 데이터, 지도 조작에 관한 사용 데이터, 기기 식별자를 Google로 보냅니다. 용도는 Google의 분석과 지도 기능 유지이며, Google은 이 데이터를 추적에 사용하지 않는다고 신고했습니다. <strong>이 데이터는 Google로 가며 개발자에게 전달되지 않습니다.</strong> App Store의 '앱 개인정보 보호' 라벨은 이를 기준으로 작성했습니다.</p>
+  <p>Google의 데이터 처리에는 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>이 적용됩니다.</p>
+  <h3>iPhone 버전: App Store 구매</h3>
+  <p><strong>작동 시점</strong>: Android 버전과 같이 앱을 열 때마다 App Store에서 구매 상태를 확인할 때, 그리고 사용자가 Pro를 구매하거나 '구매 복원'을 사용할 때입니다.</p>
+  <p><strong>일어나는 일</strong>: 결제와 확인은 모두 Apple이 처리합니다. 앱은 사용자의 이름, 이메일, 결제 수단, Apple 계정을 <strong>받거나 저장하지 않으며</strong>, 기기에는 위 표에 적힌 구매 상태만 기록합니다. Apple은 이 기기가 스토어에서 이 앱의 상품과 구매 상태를 확인했다는 사실을 알게 됩니다. <strong>이 데이터는 Apple로 가며 개발자에게 전달되지 않습니다.</strong></p>
+  <p>Apple의 데이터 처리에는 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 개인정보 처리방침</a>이 적용됩니다.</p>
 </section>
 
 <section>
@@ -225,7 +235,7 @@
 <section>
   <h2>6. 데이터 보관과 삭제</h2>
   <p>사용자의 데이터는 기기에 저장되며, 보관 기간은 사용자가 결정합니다.</p>
-  <p><strong>삭제 방법</strong>: 앱에서 개별 항목을 삭제하거나, 앱을 삭제하세요 —— 앱을 삭제하면 모든 로컬 데이터가 함께 지워집니다. 시스템 자동 백업이 꺼져 있으므로 클라우드에 데이터가 남지 않습니다.</p>
+  <p><strong>삭제 방법</strong>: 앱에서 개별 항목을 삭제하거나, 앱을 삭제하세요 —— 앱을 삭제하면 모든 로컬 데이터가 함께 지워집니다. Android 버전은 시스템 자동 백업이 꺼져 있어 클라우드에 데이터가 남지 않습니다. iPhone 버전에서 iCloud 백업을 켜 두었다면 이전 백업에 이 앱의 데이터가 남아 있을 수 있으며, iCloud 백업 관리에서 삭제할 수 있습니다.</p>
   <p>사용자가 백업 파일을 내보낸 적이 있다면, 그 파일은 사용자가 고른 저장 위치에 있으므로 직접 삭제해야 합니다.</p>
 </section>
 

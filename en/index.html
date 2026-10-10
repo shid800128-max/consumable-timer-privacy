@@ -146,7 +146,7 @@
 
 <header>
   <h1>TASK: Replacement Reminder — Privacy Policy</h1>
-  <p class="updated">Last updated: October 3, 2026</p>
+  <p class="updated">Last updated: October 11, 2026</p>
   <p>TASK: Replacement Reminder (Consumable Timer) is an app that reminds you when household consumables need replacing. The developer is Boen.</p>
   <p class="lead">In one sentence: this app has no server and no account system. Your data stays on your phone. The developer cannot access any of your data.</p>
 </header>
@@ -154,7 +154,7 @@
 <section>
   <h2>1. The developer receives none of your data</h2>
   <p>The app has <strong>no backend server</strong> and <strong>no account or sign-in system</strong>. Your list of items, replacement history, places, location coordinates and all settings are written only to a local database on your phone and are never uploaded anywhere.</p>
-  <p>The app <strong>does not use any analytics, tracking or advertising SDK</strong> (such as Firebase Analytics, Google Analytics or ad networks). The developer has no way of knowing who you are, what you record, or how you use the app.</p>
+  <p>The app <strong>does not use any analytics, tracking or advertising SDK</strong> (such as Firebase Analytics, Google Analytics or ad networks). For the data the map component itself sends to Google, see section 4. The developer has no way of knowing who you are, what you record, or how you use the app.</p>
 </section>
 
 <section>
@@ -172,10 +172,12 @@
   </table>
   </div>
   <p>The app has <strong>disabled Android's automatic system backup</strong> (<code>allowBackup="false"</code>), so the data above is not automatically uploaded to the cloud by the system and is not automatically transferred when you change devices. It can only be moved between devices through a backup file you export yourself.</p>
+  <p><strong>iPhone version</strong>: Depending on your iCloud Backup settings, iOS includes the data above in <strong>the iCloud backup under your own Apple Account</strong> (or in a device backup you make on a computer), so it comes along when you restore a new iPhone from that backup. That backup belongs to your Apple Account and the developer cannot access it. If you don't want the app's data in your backup, turn the app off in the backup settings under iPhone Settings → your name → iCloud.</p>
 </section>
 
 <section>
   <h2>3. Permissions, one by one</h2>
+  <blockquote><p>The permissions below use Android's names. The iPhone version only needs location (While Using the App / Always), notifications and camera, used and handled the same way. The iPhone version has no Wi-Fi mode and needs no storage or boot permission (export and import use the system file picker).</p></blockquote>
   <h3>Location (approximate, precise, background location)</h3>
   <p><strong>Purpose</strong>: To tell whether you have returned to a place you set yourself, so reminders go off when you can actually act on them.</p>
   <p><strong>How it is handled</strong>: Location matching happens <strong>entirely on your device</strong>. Coordinates never leave the device and are not sent to the developer or any third party.</p>
@@ -198,7 +200,7 @@
 
 <section>
   <h2>4. Third-party services</h2>
-  <p>The app uses only two components provided by Google:</p>
+  <p>The Android version uses only two components provided by Google; the iPhone version uses the Google Maps SDK for iOS and Apple's App Store purchases (see the last two parts of this section):</p>
   <h3>Google Maps SDK for Android</h3>
   <p><strong>When it runs</strong>: Only when you open the "set place location" screen.</p>
   <p><strong>What happens</strong>: Showing the map requires requesting map tiles from Google; these requests include the visible map area and device information. <strong>This data goes to Google, not to the developer.</strong></p>
@@ -214,6 +216,14 @@
   <p><strong>What happens</strong>: Payments and checks are handled by Google Play. The app <strong>does not obtain or store</strong> your name, email address, payment method or store account; only the purchase status listed in the table above is kept on the device.</p>
   <p>Because these checks are network requests to Google, Google knows that this device has queried the store about this app's products and purchase status. <strong>This data goes to Google, not to the developer.</strong></p>
   <p>Google's handling of this data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+  <h3>iPhone version: Google Maps SDK for iOS</h3>
+  <p><strong>When it runs</strong>: Same as on Android — only when you open the "Set place location" page.</p>
+  <p><strong>What happens</strong>: Besides requesting map tiles from Google, according to the privacy information Google publishes for this component, it also sends diagnostics such as crash and performance data, usage data about map interactions, and a device identifier to Google, for Google's analytics and to keep the map working; Google declares that this data is not used for tracking. <strong>This data goes to Google, not to the developer.</strong> The "App Privacy" label on the App Store page is filled in on this basis.</p>
+  <p>Google's handling of this data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+  <h3>iPhone version: App Store purchases</h3>
+  <p><strong>When it runs</strong>: Same as on Android — each time you open the app it checks your purchase status with the App Store, and when you buy Pro or use "Restore purchases".</p>
+  <p><strong>What happens</strong>: Payments and checks are handled by Apple. The app <strong>does not receive or store</strong> your name, email, payment method or Apple Account; only the purchase status listed in the table above is stored locally. Apple will know that this device checked the app's products and purchase status with the store. <strong>This data goes to Apple, not to the developer.</strong></p>
+  <p>Apple's handling of this data is governed by the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</p>
 </section>
 
 <section>
@@ -225,7 +235,7 @@
 <section>
   <h2>6. Data retention and deletion</h2>
   <p>Your data is kept on your device for as long as you choose.</p>
-  <p><strong>How to delete</strong>: Delete individual items in the app, or simply uninstall the app — uninstalling removes all local data. Because automatic system backup is disabled, no data remains in the cloud.</p>
+  <p><strong>How to delete</strong>: Delete individual items in the app, or simply uninstall the app — uninstalling removes all local data. On Android, automatic system backup is disabled, so no data remains in the cloud; on iPhone, if iCloud Backup is on, earlier backups may still contain the app's data, which you can delete in iCloud's backup management.</p>
   <p>If you have exported a backup file, it is in the storage location you chose and must be deleted by you.</p>
 </section>
 

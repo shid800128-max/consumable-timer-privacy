@@ -146,7 +146,7 @@
 
 <header>
   <h1>TASK 耗材计时 — 隐私政策</h1>
-  <p class="updated">最后更新：2026 年 10 月 3 日</p>
+  <p class="updated">最后更新：2026 年 10 月 11 日</p>
   <p>耗材计时（Consumable Timer）是一款耗材更换提醒应用，开发者为 Boen。</p>
   <p class="lead">一句话总结：这个应用没有服务器、没有账号系统，你的数据只留在你的手机里。开发者无法获取你的任何数据。</p>
 </header>
@@ -154,7 +154,7 @@
 <section>
   <h2>1. 开发者不会收到你的任何数据</h2>
   <p>本应用<strong>没有后端服务器</strong>，也<strong>没有账号或登录系统</strong>。你创建的耗材列表、更换记录、地点、位置坐标与所有设置，全部只写入你手机上的本地数据库，不会上传到任何地方。</p>
-  <p>本应用<strong>未使用任何分析、追踪或广告 SDK</strong>（例如 Firebase Analytics、Google Analytics、广告联盟等）。开发者没有任何渠道得知你是谁、你记录了什么、或你如何使用这个应用。</p>
+  <p>本应用<strong>未使用任何分析、追踪或广告 SDK</strong>（例如 Firebase Analytics、Google Analytics、广告联盟等）。地图组件本身会发送给 Google 的数据，见第 4 节。开发者没有任何渠道得知你是谁、你记录了什么、或你如何使用这个应用。</p>
 </section>
 
 <section>
@@ -172,10 +172,12 @@
   </table>
   </div>
   <p>本应用已<strong>停用 Android 系统自动备份</strong>（<code>allowBackup="false"</code>），因此上述数据不会被系统自动上传到云端，也不会在更换设备时自动转移。跨设备转移只能通过你主动导出的备份文件。</p>
+  <p><strong>iPhone 版</strong>：iOS 会根据你的 iCloud 云备份设置，把上述数据一起放进<strong>你自己 Apple 账户下的 iCloud 备份</strong>（或你在电脑上创建的设备备份），换新 iPhone 时从备份恢复就能带过去。这份备份属于你的 Apple 账户，开发者无法访问。不想让本应用的数据进入备份，可以在 iPhone“设置”→ 你的名字 →“iCloud”的备份管理中，把本应用从备份项目关闭。</p>
 </section>
 
 <section>
   <h2>3. 权限逐项说明</h2>
+  <blockquote><p>以下以 Android 的权限名称说明。iPhone 版需要的只有定位（使用 App 期间／始终）、通知与相机，用途与处理方式相同；iPhone 版没有 Wi-Fi 模式，也不需要存储空间或开机权限（导出、导入通过系统的文件选择器）。</p></blockquote>
   <h3>位置（大致位置、精确位置、后台位置）</h3>
   <p><strong>用途</strong>：判断你是否回到了你自行设置的地点，以便在你真的动得了手的时候才发出提醒。</p>
   <p><strong>如何处理</strong>：位置比对<strong>完全在你的设备上进行</strong>。坐标不会离开设备，不会发送给开发者或任何第三方。</p>
@@ -198,7 +200,7 @@
 
 <section>
   <h2>4. 第三方服务</h2>
-  <p>本应用仅使用两项由 Google 提供的组件：</p>
+  <p>Android 版仅使用两项由 Google 提供的组件；iPhone 版使用 Google Maps SDK for iOS 与 Apple 的 App Store 购买服务（见本节最后两段）：</p>
   <h3>Google Maps SDK for Android</h3>
   <p><strong>何时运作</strong>：只有当你进入“设置地点位置”这一页时。</p>
   <p><strong>会发生什么</strong>：显示地图需要向 Google 请求地图图块，该请求会包含地图的显示范围与设备信息。<strong>这些数据流向 Google，不会流向开发者。</strong></p>
@@ -214,6 +216,14 @@
   <p><strong>会发生什么</strong>：付款与查询都由 Google Play 处理。应用<strong>不会获取也不会存储</strong>你的姓名、电子邮件、付款方式或商店账号；本地只记录上表所列的购买状态。</p>
   <p>由于这些查询是向 Google 发出的网络请求，Google 会知道这部设备向商店查询过本应用的商品与购买状态。<strong>这些数据流向 Google，不会流向开发者。</strong></p>
   <p>Google 对上述数据的处理适用 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>。</p>
+  <h3>iPhone 版：Google Maps SDK for iOS</h3>
+  <p><strong>何时运行</strong>：与 Android 版相同，只有当你进入“设置地点位置”这一页时。</p>
+  <p><strong>会发生什么</strong>：除了向 Google 请求地图瓦片，根据 Google 为这个组件公布的隐私信息，它还会把崩溃与性能等诊断数据、地图操作相关的使用数据，以及一个设备标识符发送给 Google，用于 Google 的分析与维持地图功能；Google 申报这些数据不用于追踪。<strong>这些数据流向 Google，不会流向开发者。</strong> App Store 商品页上的“App 隐私”标签就是据此填写。</p>
+  <p>Google 对这些数据的处理适用 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私权政策</a>。</p>
+  <h3>iPhone 版：App Store 购买</h3>
+  <p><strong>何时运行</strong>：与 Android 版相同 —— 每次打开应用时向 App Store 确认购买状态，以及你主动购买 Pro 或使用“恢复购买”时。</p>
+  <p><strong>会发生什么</strong>：付款与查询都由 Apple 处理。应用<strong>不会获取也不会存储</strong>你的姓名、电子邮件、付款方式或 Apple 账户；本地只记录上表所列的购买状态。Apple 会知道这部设备向商店查询过本应用的商品与购买状态。<strong>这些数据流向 Apple，不会流向开发者。</strong></p>
+  <p>Apple 对上述数据的处理适用 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隐私政策</a>。</p>
 </section>
 
 <section>
@@ -225,7 +235,7 @@
 <section>
   <h2>6. 数据保留与删除</h2>
   <p>你的数据保存在你的设备上，保留期限由你决定。</p>
-  <p><strong>删除方式</strong>：在应用内删除个别项目，或直接卸载应用 —— 卸载会一并移除所有本地数据。由于系统自动备份已停用，数据不会残留在云端。</p>
+  <p><strong>删除方式</strong>：在应用内删除个别项目，或直接卸载应用 —— 卸载会一并移除所有本地数据。Android 版已停用系统自动备份，数据不会残留在云端；iPhone 版若开启了 iCloud 云备份，之前的备份里可能仍有本应用的数据，可在 iCloud 的备份管理中删除。</p>
   <p>若你曾主动导出备份文件，该文件位于你自行选择的存储位置，需由你自行删除。</p>
 </section>
 
